@@ -7,4 +7,4 @@ services:
     - docker build -t bmadjidi/docker-react -f Dockerfile.dev .
 
   script:
-    - docker run bmadjidi/docker-react npm run test -- --coverage
+    - docker run -e CI=true bmadjidi/docker-react npm run test
