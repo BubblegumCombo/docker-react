@@ -4,7 +4,7 @@ services:
   - docker
 
   before_install:
-    - docker build -t BubblegumCombo/docker-react -f Dockerfile.dev .
+    - docker build -t bmadjidi/docker-react -f Dockerfile.dev .
 
   script:
-    - docker run -e CI=true BubblegumCombo/docker-react npm run test
+    - docker run -e CI=true bmadjidi/docker-react npm run test
